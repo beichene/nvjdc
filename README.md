@@ -16,11 +16,11 @@ s
 1拉源码
 国内
 ```
-git clone https://ghproxy.com/https://github.com/beichen/nvjdc.git /root/nolanjdc
+git clone https://ghproxy.com/https://github.com/beichene/nvjdc.git /root/nolanjdc
 ```
 国外
 ```
-git clone https://github.com/beichen/nvjdc.git /root/nolanjdc
+git clone https://github.com/beichene/nvjdc.git /root/nolanjdc
 ```
 
 

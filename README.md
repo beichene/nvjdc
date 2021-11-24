@@ -3,24 +3,24 @@
 
 ## 提示
 
-由于我自己的环境是centos x86，arm不支持
+测试的环境是centos x86，arm不支持
 
-这是打包过的 不要fork
+这是打包过的
 
 不是热更新 每次修改配置需要重启容器
 
 s
 
-## 安装教
+## 安装教程
 
 1拉源码
 国内
 ```
-git clone https://ghproxy.com/https://github.com/NolanHzy/nvjdcdocker.git /root/nolanjdc
+git clone https://ghproxy.com/https://github.com/beichen/nvjdc.git /root/nolanjdc
 ```
 国外
 ```
-git clone https://github.com/NolanHzy/nvjdcdocker.git /root/nolanjdc
+git clone https://github.com/beichen/nvjdc.git /root/nolanjdc
 ```
 
 
@@ -66,7 +66,7 @@ cd  /root/nolanjdc
 9启动镜像
 
 ```
-sudo docker run   --name nolanjdc -p 5701:80 -d  -v  "$(pwd)":/app \
+sudo docker run   --name nolanjdc -p 5211:80 -d  -v  "$(pwd)":/app \
 -v /etc/localtime:/etc/localtime:ro \
 -it --privileged=true  nolanhzy/nvjdc:latest
 ```

@@ -61,16 +61,16 @@ rm  -f chrome-linux.zip
 cd  /root/nolanjdc
 ```
 
-9启动镜像
+8启动镜像
 
 ```
 sudo docker run   --name nolanjdc -p 5211:80 -d  -v  "$(pwd)":/app \
 -v /etc/localtime:/etc/localtime:ro \
 -it --privileged=true  10529459/lanyannvjdc:1.4
 ```
-10: 将config.json文件修改为自己的配置 （拉取的源码里自带config.json文件，安装提示修改即可
+9将config.json文件修改为自己的配置 （拉取的源码里自带config.json文件，安装提示修改即可
 
-11查看 日志 
+10查看 日志 
 
 ```
 docker logs -f nolanjdc 

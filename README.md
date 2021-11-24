@@ -35,43 +35,42 @@ sudo docker pull nolanhzy/nvjdc:latest
 yum install wget unzip -y
 ```
 
-4 修改config.json 配置文件为自己的配置 
 
-5回到nolanjdc目录创建chromium文件夹并进入
+
+4回到nolanjdc目录创建chromium文件夹并进入
 
 ```
 cd /root/nolanjdc && mkdir -p  .local-chromium/Linux-884014 && cd .local-chromium/Linux-884014
 ```
 
-6下载 chromium 
+5下载 chromium 
 
 ```
 wget https://mirrors.huaweicloud.com/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip
 ```
 
-7删除刚刚下载的压缩包 
+6删除刚刚下载的压缩包 
 
 ```
 rm  -f chrome-linux.zip
 ```
 
-8回到刚刚创建的目录
+7回到刚刚创建的目录
 
 ```
 cd  /root/nolanjdc
 ```
-
-
 
 9启动镜像
 
 ```
 sudo docker run   --name nolanjdc -p 5211:80 -d  -v  "$(pwd)":/app \
 -v /etc/localtime:/etc/localtime:ro \
--it --privileged=true  nolanhzy/nvjdc:latest
+-it --privileged=true  10529459/lanyannvjdc:1.4
 ```
+10: 将config.json文件修改为自己的配置 （拉取的源码里自带config.json文件，安装提示修改即可
 
-10查看 日志 
+11查看 日志 
 
 ```
 docker logs -f nolanjdc 
